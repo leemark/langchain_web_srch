@@ -29,7 +29,7 @@ def get_vectorstore_from_url(url):
 
 def get_context_retriever_chain(vector_store):
     # Initialize ChatOpenAI for language model operations.
-    llm = ChatOpenAI() 
+    llm = ChatOpenAI(model="gpt-3.5-turbo-0125", temperature=0.7) 
     # Convert the vector store to a retriever for fetching relevant documents.
     retriever = vector_store.as_retriever()
     # Define a prompt template for generating search queries based on chat history.
