@@ -68,7 +68,7 @@ def get_response(user_input):
         "input": user_query,
         "chat_history": st.session_state.chat_history,
     })
-    st.write(response)
+    # st.info(response, icon="ℹ️")
     return response['answer']
 
 # Configure the Streamlit page with title and icon.
